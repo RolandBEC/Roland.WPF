@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPAddressUtils.cs" />
+    <Compile Include="ObjectUtils.cs" />
+    <Compile Include="ObservableCollectionUtils.cs" />
     <Compile Include="StringUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

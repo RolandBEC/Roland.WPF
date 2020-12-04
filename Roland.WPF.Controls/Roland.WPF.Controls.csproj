@@ -51,6 +51,7 @@
     <Compile Include="Controls\RoundedButton.cs" />
     <Compile Include="Controls\RoundedRepeatButton.cs" />
     <Compile Include="Controls\RoundedToggleButton.cs" />
+    <Compile Include="Utils\MouseUtilities.cs" />
     <Compile Include="Utils\TextRangeUtils.cs" />
     <Compile Include="Utils\VisualHelper.cs" />
   </ItemGroup>
