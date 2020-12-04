@@ -51,6 +51,14 @@
     <Compile Include="Controls\RoundedButton.cs" />
     <Compile Include="Controls\RoundedRepeatButton.cs" />
     <Compile Include="Controls\RoundedToggleButton.cs" />
+    <Compile Include="Utils\TextRangeUtils.cs" />
+    <Compile Include="Utils\VisualHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Roland.WPF.C_Sharp_Utils\Roland.WPF.C_Sharp_Utils.csproj">
+      <Project>{85c707d4-f675-4715-87be-ce0f7b36f606}</Project>
+      <Name>Roland.WPF.C_Sharp_Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
