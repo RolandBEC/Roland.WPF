@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HandlerIniFile.cs" />
     <Compile Include="IPAddressUtils.cs" />
     <Compile Include="ObjectUtils.cs" />
     <Compile Include="ObservableCollectionUtils.cs" />
