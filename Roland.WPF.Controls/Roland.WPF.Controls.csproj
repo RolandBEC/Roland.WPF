@@ -36,6 +36,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,14 +47,28 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adorners\DragAdorner.cs" />
+    <Compile Include="Behaviors\MultiSelectorBehaviours.cs" />
+    <Compile Include="Behaviors\TwoListSynchronizer.cs" />
     <Compile Include="Controls\DataGrids\DataGridColmuns\DataGridDatePickerColumn.cs" />
+    <Compile Include="Controls\ZoomSlider.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\EnumDescriptionConverter.cs" />
+    <Compile Include="Converters\InvertBooleanConverter.cs" />
+    <Compile Include="Converters\ListToStringConverter.cs" />
+    <Compile Include="Misc\IListItemConverter.cs" />
+    <Compile Include="Misc\ListViewDragDropManager.cs" />
+    <Compile Include="Misc\TwoListSynchronizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controls\RoundedButton.cs" />
     <Compile Include="Controls\RoundedRepeatButton.cs" />
     <Compile Include="Controls\RoundedToggleButton.cs" />
+    <Compile Include="Utils\DataGridExtensions.cs" />
+    <Compile Include="Utils\IconHelper.cs" />
     <Compile Include="Utils\MouseUtilities.cs" />
     <Compile Include="Utils\TextRangeUtils.cs" />
     <Compile Include="Utils\VisualHelper.cs" />
+    <Compile Include="ValidationRules\IntegerRangeValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Roland.WPF.C_Sharp_Utils\Roland.WPF.C_Sharp_Utils.csproj">
@@ -61,5 +76,6 @@
       <Name>Roland.WPF.C_Sharp_Utils</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

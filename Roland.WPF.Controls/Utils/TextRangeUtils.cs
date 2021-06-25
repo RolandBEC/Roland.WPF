@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Documents;
 using Roland.WPF.C_Sharp_Utils;
 
@@ -49,6 +50,48 @@ namespace Roland.WPF.Controls.Utils
                     let endPointer = GetEndPointer(_flowParts, position + searchedText.Length)
                     select new TextRange(startPointer, endPointer)).ToList();
 
+        }
+
+        /// <summary>
+        ///     Find object of specfic type <typeparam name="T" /> between <param name="topPos" />  and <param name="bottomPos" />
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="topPos"></param>
+        /// <param name="bottomPos"></param>
+        /// <param name="searchBackwards">
+        ///     Indcates of the search sould be done backward or not.
+        ///     False by default
+        /// </param>
+        /// <returns></returns>
+        public static T FindObjectFirst<T>(TextPointer topPos, TextPointer bottomPos, bool searchBackwards) where T : DependencyObject
+        {
+            if (searchBackwards)
+            {
+                TextPointer currPos = bottomPos;
+                while (currPos != null && currPos.CompareTo(topPos) >= 0)
+                {
+                    DependencyObject depObj = currPos.GetAdjacentElement(LogicalDirection.Backward);
+                    if (depObj is T)
+                    {
+                        return (T)depObj;
+                    }
+                    currPos = currPos.GetNextContextPosition(LogicalDirection.Backward);
+                }
+            }
+            else
+            {
+                TextPointer currPos = topPos;
+                while (currPos != null && currPos.CompareTo(bottomPos) <= 0)
+                {
+                    DependencyObject depObj = currPos.GetAdjacentElement(LogicalDirection.Forward);
+                    if (depObj is T)
+                    {
+                        return (T)depObj;
+                    }
+                    currPos = currPos.GetNextContextPosition(LogicalDirection.Forward);
+                }
+            }
+            return null;
         }
 
         /// <summary>

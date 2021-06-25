@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:Roland.WPF.Samples"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Roland.WPF.Styles;component/Styles/DefaultRoundedButtonStyle.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Roland.WPF.Styles;component/Styles/DefaultRoundedRepeatButtonStyle.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Roland.WPF.Styles;component/Styles/DefaultRoundedToggleButtonStyle.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Roland.WPF.Styles;component/Styles/DefaultZoomSliderStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+   
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

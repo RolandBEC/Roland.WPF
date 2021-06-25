@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="impl\SearchableViewModel.cs" />
+    <Compile Include="impl\SearchableViewModelContainer.cs" />
     <Compile Include="ISearchableView.cs" />
     <Compile Include="ISearchableViewModel.cs" />
     <Compile Include="ISearchableViewModelContainer.cs" />
+    <Compile Include="ISearchManager.cs" />
     <Compile Include="MatchedProperty.cs" />
     <Compile Include="PropertyToSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

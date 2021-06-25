@@ -122,5 +122,7 @@ namespace Roland.WPF.Controls.Utils
             T _parent = _parentObject as T;
             return _parent ?? TryFindParent<T>(_parentObject);
         }
+
+
     }
 }

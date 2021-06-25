@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Roland.WPF.Controls\Roland.WPF.Controls.csproj">
+      <Project>{e84fa4cd-7c9c-4908-ad7c-22f382b4eab1}</Project>
+      <Name>Roland.WPF.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

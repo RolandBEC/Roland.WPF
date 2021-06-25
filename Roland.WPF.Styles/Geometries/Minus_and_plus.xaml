@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <PathGeometry x:Key="horizontalBar"  Figures="M64 37.313c0 1.657-1.343 3-3 3H3c-1.657 0-3-1.343-3-3V26.688c0-1.657 1.343-3 3-3h58c1.657 0 3 1.343 3 3V37.313z" FillRule="NonZero"/>
+
+
+    <PathGeometry x:Key="verticalBar" Figures="M37.313 64c1.657 0 3-1.343 3-3V3c0-1.657-1.343-3-3-3H26.688c-1.657 0-3 1.343-3 3v58c0 1.657 1.343 3 3 3H37.313z" FillRule="NonZero"/>
+
+    <DrawingImage x:Key="minusSignDrawing" >
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <GeometryDrawing Brush="#75777A" Geometry="{StaticResource horizontalBar}"/>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <DrawingImage x:Key="plusSignDrawing" >
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <GeometryDrawing Brush="#75777A" Geometry="{StaticResource horizontalBar}"/>
+                <GeometryDrawing Brush="#75777A" Geometry="{StaticResource verticalBar}"/>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+</ResourceDictionary>
